@@ -24,3 +24,6 @@ jobs:
       - name: Deploy to ${{ github.event.inputs.environment }}
         run: |
           echo "Deploying to ${{ github.event.inputs.environment }}"
+          echo "Using the following environment variables:"
+          ## This will use the BUCKET_NAME var from the Environment
+          echo "  - ENVIRONMENT: ${{ vars.BUCKET_NAME }}"
