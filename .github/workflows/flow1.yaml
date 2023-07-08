@@ -27,3 +27,7 @@ jobs:
           echo "Using the following environment variables:"
           ## This will use the BUCKET_NAME var from the Environment
           echo "  - ENVIRONMENT: ${{ vars.BUCKET_NAME }}"
+      - name: Dump the var object
+        run: |
+          echo "Dumping the vars object"
+          echo "${{ toJson(vars) }}"
