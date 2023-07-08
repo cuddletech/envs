@@ -31,3 +31,11 @@ jobs:
         run: |
           echo "Dumping the vars object"
           echo "${{ toJson(vars) }}"
+      - name: Dump the env object
+        run: |
+          echo "Dumping the env object"
+          echo "${{ toJson(env) }}"
+      - name: Dump the github object
+        run: |
+          echo "Dumping the github object"
+          echo "${{ toJson(github) }}"
